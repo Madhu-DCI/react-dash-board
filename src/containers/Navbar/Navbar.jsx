@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { useStyles } from './styles';
 
 function Navbar({ open, handleDrawerOpen }) {
@@ -30,6 +31,9 @@ function Navbar({ open, handleDrawerOpen }) {
         >
           Dashboard
         </Typography>
+        <IconButton color="inherit">
+          <ExitToAppIcon />
+        </IconButton>
       </Toolbar>
     </AppBar>
   );

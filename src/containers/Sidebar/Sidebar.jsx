@@ -4,19 +4,21 @@ import {
   Drawer,
   IconButton,
   List,
-  ListSubheader,
 } from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import MovieIcon from '@material-ui/icons/Movie';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
+import ClassIcon from '@material-ui/icons/Class';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import AnnouncementIcon from '@material-ui/icons/Announcement';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import PeopleIcon from '@material-ui/icons/People';
+import SettingsIcon from '@material-ui/icons/Settings';
 import { useStyles } from './styles';
+import { Link } from 'react-router-dom';
 
 function Sidebar({ open, handleDrawerClose }) {
   const classes = useStyles();
@@ -36,51 +38,73 @@ function Sidebar({ open, handleDrawerClose }) {
       </div>
       <Divider />
       <List>
-        <ListItem button>
-          <ListItemIcon>
-            <DashboardIcon />
-          </ListItemIcon>
-          <ListItemText primary='Shows' />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ShoppingCartIcon />
-          </ListItemIcon>
-          <ListItemText primary='Courses' />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <PeopleIcon />
-          </ListItemIcon>
-          <ListItemText primary='Blogs' />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <BarChartIcon />
-          </ListItemIcon>
-          <ListItemText primary='Articles' />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <LayersIcon />
-          </ListItemIcon>
-          <ListItemText primary='Announcements' />
-        </ListItem>
+        <Link to="/">
+          <ListItem button>
+            <ListItemIcon>
+              <DashboardIcon />
+            </ListItemIcon>
+            <ListItemText primary='Home' />
+          </ListItem>
+        </Link>
+        <Link to="/shows">
+          <ListItem button>
+            <ListItemIcon>
+              <MovieIcon />
+            </ListItemIcon>
+            <ListItemText primary='Shows' />
+          </ListItem>
+        </Link>
+        <Link to="/courses">
+          <ListItem button>
+            <ListItemIcon>
+              <ClassIcon />
+            </ListItemIcon>
+            <ListItemText primary='Courses' />
+          </ListItem>
+        </Link>
+        <Link to="/blogs">
+          <ListItem button>
+            <ListItemIcon>
+              <MenuBookIcon />
+            </ListItemIcon>
+            <ListItemText primary='Blogs' />
+          </ListItem>
+        </Link>
+        <Link to="/articles">
+          <ListItem button>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary='Articles' />
+          </ListItem>
+        </Link>
+        <Link to="/announcements">
+          <ListItem button>
+            <ListItemIcon>
+              <AnnouncementIcon />
+            </ListItemIcon>
+            <ListItemText primary='Announcements' />
+          </ListItem>
+        </Link>
       </List>
       <Divider />
       <List>
-        <ListItem button>
-          <ListItemIcon>
-            <AssignmentIcon />
-          </ListItemIcon>
-          <ListItemText primary='Users' />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <AssignmentIcon />
-          </ListItemIcon>
-          <ListItemText primary='Settings' />
-        </ListItem>
+        <Link to="/users">
+          <ListItem button>
+            <ListItemIcon>
+              <PeopleIcon />
+            </ListItemIcon>
+            <ListItemText primary='Users' />
+          </ListItem>
+        </Link>
+        <Link to="/settings">
+          <ListItem button>
+            <ListItemIcon>
+              <SettingsIcon />
+            </ListItemIcon>
+            <ListItemText primary='Settings' />
+          </ListItem>
+        </Link>
       </List>
     </Drawer>
   );

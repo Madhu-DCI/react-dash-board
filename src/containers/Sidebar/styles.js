@@ -18,6 +18,10 @@ export const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    '& a': {
+      textDecoration: 'none',
+      color: 'inherit',
+    },
   },
   drawerPaperClose: {
     overflowX: 'hidden',
