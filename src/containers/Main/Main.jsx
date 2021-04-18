@@ -1,11 +1,9 @@
 import { Container } from '@material-ui/core';
 import { Route, Switch } from 'react-router-dom';
 import { useStyles } from './styles';
-import Shows from '../../pages/Shows/Shows'
-import Courses from '../../pages/Courses/Courses'
-import Blogs from '../../pages/Blogs/Blogs'
-import Articles from '../../pages/Articles/Articles'
-import Announcements from '../../pages/Announcements/Announcements'
+import Investors from '../../pages/Investors/Investors'
+import StartUp from '../../pages/StartUp/StartUp'
+import Team from '../../pages/Team/Team'
 import Users from '../../pages/Users/Users'
 import Settings from '../../pages/Settings/Settings'
 import Home from '../../pages/Home/Home'
@@ -19,11 +17,9 @@ function Main() {
       <div className={classes.appBarSpacer} />
       <Container maxWidth='lg' className={classes.container}>
         <Switch>
-          <Route path="/shows" component={Shows} />
-          <Route path="/courses" component={Courses} />
-          <Route path="/blogs" component={Blogs} />
-          <Route path="/articles" component={Articles} />
-          <Route path="/announcements" component={Announcements} />
+          <Route path="/investors" component={Investors} />
+          <Route path="/startup" component={StartUp} />
+          <Route path="/team" component={Team} />
           <Route path="/users" component={Users} />
           <Route path="/settings" component={Settings} />
           <Route path="/auth" component={Auth} />

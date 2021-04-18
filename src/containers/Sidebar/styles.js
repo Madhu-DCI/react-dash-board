@@ -34,4 +34,7 @@ export const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9),
     },
   },
+  icons: {
+    fontSize: '1.5rem',
+  },
 }));

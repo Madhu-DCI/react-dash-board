@@ -9,14 +9,13 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MovieIcon from '@material-ui/icons/Movie';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ClassIcon from '@material-ui/icons/Class';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
-import AnnouncementIcon from '@material-ui/icons/Announcement';
-import AssignmentIcon from '@material-ui/icons/Assignment';
-import PeopleIcon from '@material-ui/icons/People';
+import GroupIcon from '@material-ui/icons/Group';
+import HomeIcon from '@material-ui/icons/Home';
+import GroupWorkIcon from '@material-ui/icons/GroupWork';
+import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import SettingsIcon from '@material-ui/icons/Settings';
+import { FaSeedling, FaUsers } from 'react-icons/fa';
+import { GiPayMoney } from 'react-icons/gi'
 import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 
@@ -40,50 +39,34 @@ function Sidebar({ open, handleDrawerClose }) {
       <List>
         <Link to="/">
           <ListItem button>
-            <ListItemIcon>
-              <DashboardIcon />
+            <ListItemIcon className={classes.icons}>
+              <HomeIcon />
             </ListItemIcon>
             <ListItemText primary='Home' />
           </ListItem>
         </Link>
-        <Link to="/shows">
+        <Link to="/investors">
           <ListItem button>
-            <ListItemIcon>
-              <MovieIcon />
+            <ListItemIcon className={classes.icons} >
+              <GiPayMoney />
             </ListItemIcon>
-            <ListItemText primary='Shows' />
+            <ListItemText primary='Investors' />
           </ListItem>
         </Link>
-        <Link to="/courses">
+        <Link to="/startup">
           <ListItem button>
-            <ListItemIcon>
-              <ClassIcon />
+            <ListItemIcon className={classes.icons}>
+              <FaSeedling />
             </ListItemIcon>
-            <ListItemText primary='Courses' />
+            <ListItemText primary='StartUp' />
           </ListItem>
         </Link>
-        <Link to="/blogs">
+        <Link to="/team">
           <ListItem button>
-            <ListItemIcon>
-              <MenuBookIcon />
+            <ListItemIcon className={classes.icons}>
+              <GroupIcon />
             </ListItemIcon>
-            <ListItemText primary='Blogs' />
-          </ListItem>
-        </Link>
-        <Link to="/articles">
-          <ListItem button>
-            <ListItemIcon>
-              <AssignmentIcon />
-            </ListItemIcon>
-            <ListItemText primary='Articles' />
-          </ListItem>
-        </Link>
-        <Link to="/announcements">
-          <ListItem button>
-            <ListItemIcon>
-              <AnnouncementIcon />
-            </ListItemIcon>
-            <ListItemText primary='Announcements' />
+            <ListItemText primary='Team' />
           </ListItem>
         </Link>
       </List>
@@ -91,15 +74,15 @@ function Sidebar({ open, handleDrawerClose }) {
       <List>
         <Link to="/users">
           <ListItem button>
-            <ListItemIcon>
-              <PeopleIcon />
+            <ListItemIcon className={classes.icons}>
+              <FaUsers />
             </ListItemIcon>
             <ListItemText primary='Users' />
           </ListItem>
         </Link>
         <Link to="/settings">
           <ListItem button>
-            <ListItemIcon>
+            <ListItemIcon className={classes.icons}>
               <SettingsIcon />
             </ListItemIcon>
             <ListItemText primary='Settings' />
